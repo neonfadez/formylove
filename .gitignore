@@ -1,0 +1,34 @@
+# .gitignore
+
+# Firebase files (not using Firebase anymore)
+functions/
+firebase.json
+.firebaserc
+firestore.rules
+firestore.indexes.json
+FIREBASE_SETUP.md
+FIREBASE_FIX.md
+FIX_PERMISSIONS.md
+
+# Server files (not needed)
+server.js
+SERVER_README.md
+
+# Setup guides (keep GOOGLE_SHEETS_SETUP.md and PROJECT_FILES.md)
+NEXT_STEPS.md
+STEP_BY_STEP.md
+QUICK_START.md
+GITHUB_FIREBASE_SETUP.md
+
+# Node modules
+node_modules/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo

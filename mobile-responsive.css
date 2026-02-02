@@ -1,0 +1,247 @@
+/* ===== Mobile Controls ===== */
+.mobile-controls {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 20;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.mobile-controls:active {
+    opacity: 1;
+}
+
+.control-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(255, 105, 180, 0.3);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 105, 180, 0.6);
+    color: white;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 15px rgba(255, 105, 180, 0.4);
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.control-btn:active {
+    transform: scale(0.9);
+    background: rgba(255, 105, 180, 0.6);
+    box-shadow: 0 2px 10px rgba(255, 105, 180, 0.6);
+}
+
+.control-btn span {
+    pointer-events: none;
+}
+
+/* Hide mobile controls on desktop */
+@media (min-width: 769px) {
+    .mobile-controls {
+        display: none;
+    }
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+    .game-container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .game-title {
+        font-size: 1.5rem;
+    }
+
+    .stat-box {
+        padding: 8px 15px;
+    }
+
+    .stat-label {
+        font-size: 0.7rem;
+    }
+
+    .stat-value {
+        font-size: 1.2rem;
+    }
+
+    .game-canvas {
+        height: 400px;
+    }
+
+    .start-title {
+        font-size: 1.8rem;
+    }
+
+    .start-instructions {
+        font-size: 0.9rem;
+        padding: 0 20px;
+    }
+
+    .start-button {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+
+    /* Letter responsive */
+    .letter-paper {
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    .letter-content {
+        font-size: 16px;
+        padding: 20px;
+        max-height: 60vh;
+    }
+
+    .letter-seal {
+        font-size: 2rem;
+    }
+
+    #closeLetterButton {
+        padding: 12px 30px;
+        font-size: 16px;
+    }
+
+    /* Valentine proposal responsive */
+    .valentine-container {
+        padding: 40px 30px;
+        max-width: 90%;
+    }
+
+    .valentine-question {
+        font-size: 2rem;
+    }
+
+    .valentine-buttons {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .valentine-yes,
+    .valentine-no {
+        font-size: 1.2rem;
+        width: 100%;
+    }
+
+    .valentine-yes {
+        padding: 15px 40px;
+    }
+
+    .valentine-no {
+        padding: 12px 30px;
+    }
+
+    /* Couples confirmation responsive */
+    .couples-container {
+        padding: 40px 30px;
+        max-width: 90%;
+    }
+
+    .couples-message {
+        font-size: 1.8rem;
+    }
+
+    .couples-subtext {
+        font-size: 1.5rem;
+    }
+
+    .couples-question {
+        font-size: 1.8rem;
+    }
+
+    .couples-buttons {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .couples-yes,
+    .couples-no {
+        font-size: 1.2rem;
+        width: 100%;
+    }
+
+    /* Celebration responsive */
+    .celebration-title {
+        font-size: 2.5rem;
+    }
+
+    .celebration-text {
+        font-size: 1.2rem;
+    }
+
+    /* Game over responsive */
+    .game-over-content {
+        padding: 30px 40px;
+    }
+
+    .game-over-title {
+        font-size: 2rem;
+    }
+
+    .final-score {
+        font-size: 1.2rem;
+    }
+
+    .final-score span {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .game-canvas {
+        height: 350px;
+    }
+
+    .mobile-controls {
+        right: 10px;
+    }
+
+    .control-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+
+    .player {
+        width: 35px;
+        height: 35px;
+        font-size: 35px;
+    }
+
+    .obstacle {
+        width: 35px !important;
+        height: 35px !important;
+    }
+
+    .bonus {
+        font-size: 25px;
+    }
+
+    .valentine-question {
+        font-size: 1.5rem;
+    }
+
+    .couples-message {
+        font-size: 1.5rem;
+    }
+
+    .couples-question {
+        font-size: 1.5rem;
+    }
+
+    .celebration-title {
+        font-size: 2rem;
+    }
+}

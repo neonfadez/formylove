@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Heart Dodger - A fun reflex game with a sweet surprise">
+    <title>Heart Dodger 💖</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile-responsive.css">
+</head>
+
+<body>
+    <div class="background-hearts"></div>
+
+    <div class="game-container">
+        <header class="game-header">
+            <div class="stat-box">
+                <span class="stat-label">Score</span>
+                <span class="stat-value" id="score">0</span>
+            </div>
+            <h1 class="game-title">Heart Dodger 💖</h1>
+            <div class="stat-box">
+                <span class="stat-label">Lives</span>
+                <span class="stat-value" id="lives">❤️❤️❤️</span>
+            </div>
+        </header>
+
+        <div class="game-canvas" id="gameCanvas">
+            <div class="start-screen" id="startScreen">
+                <h2 class="start-title">Ready to Play? 💕</h2>
+                <p class="start-instructions">
+                    Use <kbd>↑</kbd> <kbd>↓</kbd> arrow keys or touch to move<br>
+                    Dodge obstacles • Collect hearts • Survive!
+                </p>
+                <button class="start-button" id="startButton">Start Game</button>
+            </div>
+
+            <!-- Mobile Controls -->
+            <div class="mobile-controls" id="mobileControls">
+                <button class="control-btn control-up" id="controlUp">
+                    <span>↑</span>
+                </button>
+                <button class="control-btn control-down" id="controlDown">
+                    <span>↓</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="high-score" id="highScore">
+            High Score: <span id="highScoreValue">0</span>
+        </div>
+    </div>
+
+    <!-- Game Over Screen -->
+    <div class="game-over-overlay" id="gameOverOverlay">
+        <div class="game-over-content">
+            <h2 class="game-over-title">Game Over</h2>
+            <p class="final-score">Final Score: <span id="finalScore">0</span></p>
+            <button class="restart-button" id="restartButton">Play Again</button>
+        </div>
+    </div>
+
+    <!-- Confession Letter -->
+    <div class="letter-overlay" id="letterOverlay">
+        <div class="floating-hearts-bg">
+            <span class="float-heart">💖</span>
+            <span class="float-heart">💕</span>
+            <span class="float-heart">💗</span>
+            <span class="float-heart">💓</span>
+            <span class="float-heart">💝</span>
+            <span class="float-heart">💖</span>
+        </div>
+        <div class="letter-container">
+            <div class="letter-paper">
+                <div class="letter-header">
+                    <span class="letter-seal">💌</span>
+                </div>
+                <div class="letter-content" id="letterContent">
+                    <!-- Text will be typed here by JavaScript -->
+                </div>
+                <button class="close-letter-button" id="closeLetterButton" style="display: none;">Close 💕</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Valentine Proposal -->
+    <div class="valentine-overlay" id="valentineOverlay">
+        <div class="floating-hearts-bg">
+            <span class="float-heart">💖</span>
+            <span class="float-heart">💕</span>
+            <span class="float-heart">💗</span>
+            <span class="float-heart">💓</span>
+            <span class="float-heart">💝</span>
+            <span class="float-heart">💖</span>
+        </div>
+        <div class="valentine-container">
+            <h2 class="valentine-question">Will you be my Valentine? 💝</h2>
+            <div class="valentine-buttons">
+                <button class="valentine-yes" id="valentineYes">Yes! 💕</button>
+                <button class="valentine-no" id="valentineNo">No</button>
+            </div>
+            <p class="click-count" id="clickCount"></p>
+        </div>
+    </div>
+
+    <!-- Couples Confirmation -->
+    <div class="couples-overlay" id="couplesOverlay">
+        <div class="floating-hearts-bg">
+            <span class="float-heart">💖</span>
+            <span class="float-heart">💕</span>
+            <span class="float-heart">💗</span>
+            <span class="float-heart">💓</span>
+            <span class="float-heart">💝</span>
+            <span class="float-heart">💖</span>
+        </div>
+        <div class="couples-container">
+            <h2 class="couples-message">I knew Khushii you would say yes! 🎉</h2>
+            <h3 class="couples-subtext">Yayayayyaayay! 💃🕺</h3>
+            <h2 class="couples-question">So we are officially couples? 💘</h2>
+            <div class="couples-buttons">
+                <button class="couples-yes" id="couplesYes">Yes! 💕</button>
+                <button class="couples-no" id="couplesNo">No</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Final Celebration -->
+    <div class="celebration-overlay" id="celebrationOverlay">
+        <div class="flowers-container" id="flowersContainer"></div>
+        <div class="celebration-content">
+            <h1 class="celebration-title">We're Official! 💑✨</h1>
+            <p class="celebration-text">This is the beginning of something beautiful 🌹</p>
+        </div>
+    </div>
+
+    <!-- Background Music -->
+    <audio id="backgroundMusic" loop>
+        <source src="love.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="game.js"></script>
+</body>
+
+</html>
