@@ -543,7 +543,7 @@ function typeWriter(text, index, callback) {
         letterContent.innerHTML += text.charAt(index) === '\n' ? '<br>' : text.charAt(index);
         // Scroll to bottom as text appears
         letterContent.scrollTop = letterContent.scrollHeight;
-        setTimeout(() => typeWriter(text, index + 1, callback), 30); // Slower typing (30ms per character)
+        setTimeout(() => typeWriter(text, index + 1, callback), 60); // Slower typing (30ms per character)
     } else if (callback) {
         callback();
     }
@@ -704,3 +704,4 @@ function sendToServer(stage, data) {
 
 // ===== Initialize Game =====
 init();
+
